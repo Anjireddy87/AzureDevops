@@ -79,6 +79,33 @@ kubectl expose pod nginx-demo --port=80 --target-port=80 --type=NodePort --names
 Get Node Port details 
 =====================
 kubectl get services
+  ubuntu@ip-192-168-1-203:~$ kubectl get service
+NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
+kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   129m
+ubuntu@ip-192-168-1-203:~$
+
+Get All pod details
+=====================
+kubectl get pod -n --all-namespaces
+ - to list all pods under each namespaces
+ex: 
+ubuntu@ip-192-168-1-203:~$ kubectl get po --all-namespaces
+NAMESPACE     NAME                                       READY   STATUS    RESTARTS       AGE
+kube-system   coredns-7c65d6cfc9-4p8hz                   1/1     Running   0              128m
+kube-system   coredns-7c65d6cfc9-m7gd2                   1/1     Running   0              128m
+kube-system   etcd-ip-192-168-1-203                      1/1     Running   0              128m
+kube-system   kube-apiserver-ip-192-168-1-203            1/1     Running   0              128m
+kube-system   kube-controller-manager-ip-192-168-1-203   1/1     Running   0              128m
+kube-system   kube-proxy-948m4                           1/1     Running   0              128m
+kube-system   kube-proxy-9mp5n                           1/1     Running   0              118m
+kube-system   kube-proxy-r9clp                           1/1     Running   0              118m
+kube-system   kube-scheduler-ip-192-168-1-203            1/1     Running   0              128m
+kube-system   weave-net-729tk                            2/2     Running   1 (122m ago)   122m
+kube-system   weave-net-9dcwr                            2/2     Running   1 (117m ago)   118m
+kube-system   weave-net-vqrgq                            2/2     Running   1 (117m ago)   118m
+prob          nginx-demo                                 1/1     Running   0              109m
+
+
 ---
 
 ## **When to Use Namespaces?**
