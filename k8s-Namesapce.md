@@ -61,7 +61,24 @@ kubectl config set-context --current --namespace=my-namespace
 ```sh
 kubectl delete namespace my-namespace
 ```
+### **Check Nodes  ** 
+=============
 
+kubectl get nodes
+
+
+
+Deploy Sample Application
+==========================
+
+kubectl run nginx-demo --image=nginx --port=80 
+
+kubectl expose pod nginx-demo --port=80 --target-port=80 --type=NodePort --namespace=prod
+
+
+Get Node Port details 
+=====================
+kubectl get services
 ---
 
 ## **When to Use Namespaces?**
