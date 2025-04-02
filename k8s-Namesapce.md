@@ -24,6 +24,10 @@ Kubernetes comes with some built-in namespaces:
 ### **1. List All Namespaces**
 ```sh
 kubectl get namespaces
+or 
+kubectl get ns
+kubectl get pod -n <custom namespace>
+  - which is used list pod deploy under the custom namesapce
 ```
 
 ### **2. Create a New Namespace**
