@@ -79,6 +79,7 @@ kubectl expose pod nginx-demo --port=80 --target-port=80 --type=NodePort --names
 Get Node Port details 
 =====================
 kubectl get services
+```sh
   ubuntu@ip-192-168-1-203:~$ kubectl get service
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   129m
@@ -88,7 +89,7 @@ Get All pod details
 =====================
 kubectl get pod -n --all-namespaces
  - to list all pods under each namespaces
-ex: 
+```sh 
 ubuntu@ip-192-168-1-203:~$ kubectl get po --all-namespaces
 NAMESPACE     NAME                                       READY   STATUS    RESTARTS       AGE
 kube-system   coredns-7c65d6cfc9-4p8hz                   1/1     Running   0              128m
