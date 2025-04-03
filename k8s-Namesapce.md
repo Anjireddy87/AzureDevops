@@ -107,10 +107,9 @@ kube-system   weave-net-vqrgq                            2/2     Running   1 (11
 prob          nginx-demo                                 1/1     Running   0              109m
 
 
----
 ##**Namespace Resource Quotas**
 
-
+---
 You can define resource quotas and limits per namespace to control the usage of resources:
 --sh
 apiVersion: v1
