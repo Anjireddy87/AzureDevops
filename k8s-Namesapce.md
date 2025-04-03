@@ -108,7 +108,23 @@ prob          nginx-demo                                 1/1     Running   0    
 
 
 ---
+##**Namespace Resource Quotas**
+-----------------------------
 
+You can define resource quotas and limits per namespace to control the usage of resources:
+
+apiVersion: v1
+kind: ResourceQuota
+metadata:
+  name: my-resource-quota
+  namespace: prod
+spec:
+  hard:
+    pods: "10"
+
+
+kubectl apply -f resource-quota.yaml
+---
 ## **When to Use Namespaces?**
 - Large clusters with multiple teams/projects.
 - Need for **resource separation** and quotas.
