@@ -109,10 +109,10 @@ prob          nginx-demo                                 1/1     Running   0    
 
 ---
 ##**Namespace Resource Quotas**
------------------------------
+
 
 You can define resource quotas and limits per namespace to control the usage of resources:
-
+--sh
 apiVersion: v1
 kind: ResourceQuota
 metadata:
